@@ -20,6 +20,7 @@ Route::get('/movies', function () {
 });
 
 Route::get('/products', 'ProductController@index');
+Route::get('/products/{product}', 'ProductController@show');
 
 Auth::routes();
 
