@@ -19,6 +19,8 @@ Route::get('/movies', function () {
     return view('movies');
 });
 
+Route::get('/products', 'ProductController@index');
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index');
