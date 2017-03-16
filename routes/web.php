@@ -11,12 +11,16 @@
 |
 */
 
+use App\Product;
+
 Route::get('/', function () {
     return view('index');
 });
 
 Route::get('/movies', function () {
-    return view('movies');
+    $movies = Product::where('category', '=', 'movies')->get();
+
+    return view('movies', compact('movies'));
 });
 
 Route::get('/products', 'ProductController@index');
