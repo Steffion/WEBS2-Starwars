@@ -1,7 +1,7 @@
 @extends('layouts.master')
 
 @section('content')
-    <div class="container">
+    <div class="col-lg-10">
         <p>
             Star Wars is an American epic space opera franchise, centered on a film series created by George Lucas.
             It depicts the adventures of various characters "a long time ago in a galaxy far, far away". <br>
@@ -22,6 +22,7 @@
             film merchandising franchise. In 2015, the total value of the Star Wars franchise was estimated at USD $41.9 billion,
             making Star Wars the second highest-grossing media franchise of all time.
         </p>
+
         <h2> Characters </h2>
 
         <br>
@@ -30,7 +31,6 @@
         <h2> Darth Vader </h2>
         <img id="imgGeneralInfo"  src="img/DarthVader.jpg">
 
-
-
+        {{-- TODO insert characters --}}
     </div>
 @endsection
