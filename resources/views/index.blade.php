@@ -23,5 +23,14 @@
             making Star Wars the second highest-grossing media franchise of all time.
         </p>
         <h2> Characters </h2>
+
+        <br>
+        <br>
+
+        <h2> Darth Vader </h2>
+        <img id="imgGeneralInfo"  src="img/DarthVader.jpg">
+
+
+
     </div>
 @endsection
