@@ -99,3 +99,22 @@ hr {
     background: url("../img/StarWars1.jpg") no-repeat fixed center;
     background-size: cover;
 }
+
+.navbar-default {
+    background-color: #b64419;
+    width: 100%;
+    text-decoration: none;
+    border: 0px;
+    font-size: 20px;
+}
+
+.charInfo {
+    float: left;
+    width: 300px;
+    height: 300px;
+}
+
+#imgGeneralInfo{
+    width: 300px;
+    height:200px;
+}

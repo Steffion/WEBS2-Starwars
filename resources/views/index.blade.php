@@ -25,6 +25,12 @@
 
         <h2> Characters </h2>
 
+        <br>
+        <br>
+
+        <h2> Darth Vader </h2>
+        <img id="imgGeneralInfo"  src="img/DarthVader.jpg">
+
         {{-- TODO insert characters --}}
     </div>
 @endsection
