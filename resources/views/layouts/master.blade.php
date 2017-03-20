@@ -22,9 +22,14 @@
     </script>
 </head>
 <body>
-@include('menu')
 
-<div class="layout">
+<div class="parallax">
+
+</div>
+
+@include('layouts.menu')
+
+<div class="container">
     @yield('content')
 </div>
 
