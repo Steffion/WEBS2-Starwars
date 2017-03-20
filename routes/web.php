@@ -17,14 +17,11 @@ Route::get('/', function () {
     return view('index');
 });
 
-Route::get('/movies', function () {
-    $movies = Product::where('category', '=', 'movies')->get();
-
-    return view('movies', compact('movies'));
-});
-
 Route::get('/products', 'ProductController@index');
-Route::get('/products/figures', 'FiguresController@index');
+Route::get('/products/figures', 'ProductController@figures');
+Route::get('/products/clothes', 'ProductController@clothes');
+Route::get('/products/movies', 'ProductController@movies');
+Route::get('/products/plushies', 'ProductController@plushies');
 Route::get('/products/{product}', 'ProductController@show');
 
 Auth::routes();
