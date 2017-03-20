@@ -8,7 +8,7 @@ class ProductController extends Controller
 {
     public function index()
     {
-        $products = Product::all();
+        $products = Product::paginate(10);
 
         return view('products.index', compact('products'));
     }
@@ -20,28 +20,28 @@ class ProductController extends Controller
 
     public function figures()
     {
-        $products = Product::where('category', '=', 'figures')->get();
+        $products = Product::where('category', '=', 'figures')->paginate(10);
 
         return view('products.index', compact('products'));
     }
 
     public function clothes()
     {
-        $products = Product::where('category', '=', 'clothes')->get();
+        $products = Product::where('category', '=', 'clothes')->paginate(10);
 
         return view('products.index', compact('products'));
     }
 
     public function movies()
     {
-        $products = Product::where('category', '=', 'movies')->get();
+        $products = Product::where('category', '=', 'movies')->paginate(10);
 
         return view('products.index', compact('products'));
     }
 
     public function plushies()
     {
-        $products = Product::where('category', '=', 'plushies')->get();
+        $products = Product::where('category', '=', 'plushies')->paginate(10);
 
         return view('products.index', compact('products'));
     }

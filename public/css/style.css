@@ -8,10 +8,18 @@ body {
     background-color: #b64419;
     font-size: 20px;
     height: 100px;
+    margin-bottom: 50px;
+}
+#navbar.affix {
+    top: 0;
+    width: 100%
 }
 
-.container {
+.footer {
     margin-top: 50px;
+    background: url("../img/StarWars1.jpg") no-repeat fixed center;
+    background-size: cover;
+    padding: 35px;
 }
 
 /* TODO Hieronder moeten we ff kijken wat niet gebruikt wordt, daarna naar style.scss verplaatsen! */
@@ -83,15 +91,11 @@ hr {
 
 .parallax {
     /* The image used */
-    background-image: url("../img/StarWars1.jpg");
-
     /* Set a specific height */
     min-height: 700px;
     width: 100%;
 
     /* Create the parallax scrolling effect */
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
+    background: url("../img/StarWars1.jpg") no-repeat fixed center;
     background-size: cover;
 }

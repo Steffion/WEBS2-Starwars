@@ -14,4 +14,7 @@
             </div>
         @endforeach
     </div>
+    <div class="row center-block">
+        {{ $products->links() }}
+    </div>
 @endsection
