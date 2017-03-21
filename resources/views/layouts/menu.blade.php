@@ -27,7 +27,7 @@
                 <a class="nav-link" href="/sale">Sale</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Shopping Cart</a>
+                <a class="nav-link" href="/cart">Shopping Cart</a>
             </li>
         </ul>
     </div>
