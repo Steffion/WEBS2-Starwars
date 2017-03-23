@@ -30,5 +30,21 @@
                 <a class="nav-link" href="#">Shopping Cart</a>
             </li>
         </ul>
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" id="userMenuDropDown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+
+                    @if (Auth::check())
+                        Welcome, {{ Auth::user()->name }}!
+                    @else
+                        Welcome, guest!
+                    @endif
+                </a>
+                <div class="dropdown-menu" aria-labelledby="userMenuDropDown">
+                    <a class="dropdown-item" href="/login">Login</a>
+                    <a class="dropdown-item" href="/register">Register</a>
+                </div>
+            </li>
+        </ul>
     </div>
 </nav>
