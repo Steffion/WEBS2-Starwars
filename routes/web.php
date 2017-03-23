@@ -22,7 +22,9 @@ Route::get('/products/figures', 'ProductController@figures');
 Route::get('/products/clothes', 'ProductController@clothes');
 Route::get('/products/movies', 'ProductController@movies');
 Route::get('/products/plushies', 'ProductController@plushies');
+Route::get('/cart', 'ShoppingCartController@index');
 Route::get('/products/{product}', 'ProductController@show');
+
 
 Auth::routes();
 
