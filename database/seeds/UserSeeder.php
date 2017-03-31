@@ -1,5 +1,6 @@
 <?php
 
+use Carbon\Carbon;
 use Illuminate\Database\Seeder;
 
 class UserSeeder extends Seeder
@@ -11,6 +12,22 @@ class UserSeeder extends Seeder
      */
     public function run()
     {
+        DB::table('users')->insert([
+            'name' => 'Stef de Goey',
+            'email' => 'stefdegoey@icloud.com',
+            'password' => bcrypt('secret'),
+            'created_at' => Carbon::now(),
+            'updated_at' => Carbon::now(),
+        ]);
+
+        DB::table('users')->insert([
+            'name' => 'Merel Kokkeler',
+            'email' => 'kokkelermerel@gmail.com',
+            'password' => bcrypt('secret'),
+            'created_at' => Carbon::now(),
+            'updated_at' => Carbon::now(),
+        ]);
+
         $faker = Faker\Factory::create();
 
         $limit = 100;
@@ -20,19 +37,9 @@ class UserSeeder extends Seeder
                 'name' => $faker->name,
                 'email' => $faker->safeEmail,
                 'password' => bcrypt('secret'),
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ]);
         }
-
-        DB::table('users')->insert([
-            'name' => 'Stef de Goey',
-            'email' => 'stefdegoey@icloud.com',
-            'password' => bcrypt('secret'),
-        ]);
-
-        DB::table('users')->insert([
-            'name' => 'Merel Kokkeler',
-            'email' => 'kokkelermerel@gmail.com',
-            'password' => bcrypt('secret'),
-        ]);
     }
 }

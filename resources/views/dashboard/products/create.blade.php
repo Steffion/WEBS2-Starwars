@@ -46,7 +46,7 @@
             <textarea class="form-control" id="description" name="description" rows="10"></textarea>
         </div>
         <div class="form-group row float-right">
-            <button onclick="window.history.back()" class="btn m-2">
+            <button onclick="window.history.back()" type="button" class="btn m-2">
                 <i class="fa fa-ban" aria-hidden="true"></i> Cancel
             </button>
             <button type="submit" class="btn btn-success m-2">

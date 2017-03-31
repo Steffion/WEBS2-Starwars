@@ -11,8 +11,6 @@
 |
 */
 
-use App\Product;
-
 Route::get('/', function () {
     return view('index');
 });
@@ -26,12 +24,20 @@ Route::get('/cart', 'ShoppingCartController@index');
 Route::get('/products/{product}', 'ProductController@show');
 
 Route::get('/dashboard', 'DashboardController@index');
+
 Route::get('/dashboard/products', 'ProductsManageController@index');
 Route::get('/dashboard/products/create', 'ProductsManageController@create');
 Route::post('/dashboard/products/create', 'ProductsManageController@store');
 Route::get('/dashboard/products/edit/{product}', 'ProductsManageController@edit');
 Route::post('/dashboard/products/edit/{product}', 'ProductsManageController@update');
 Route::get('/dashboard/products/delete/{product}', 'ProductsManageController@destroy');
+
+Route::get('/dashboard/users', 'UsersManageController@index');
+Route::get('/dashboard/users/create', 'UsersManageController@create');
+Route::post('/dashboard/users/create', 'UsersManageController@store');
+Route::get('/dashboard/users/edit/{user}', 'UsersManageController@edit');
+Route::post('/dashboard/users/edit/{user}', 'UsersManageController@update');
+Route::get('/dashboard/users/delete/{user}', 'UsersManageController@destroy');
 
 Auth::routes();
 Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout');
