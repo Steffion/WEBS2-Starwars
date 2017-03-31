@@ -32,8 +32,8 @@
         </ul>
         <ul class="navbar-nav ml-auto">
             <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" id="userMenuDropDown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-
+                <a class="nav-link dropdown-toggle" id="userMenuDropDown" data-toggle="dropdown" aria-haspopup="true"
+                   aria-expanded="false">
                     @if (Auth::check())
                         Welcome, {{ Auth::user()->name }}!
                     @else
@@ -41,8 +41,13 @@
                     @endif
                 </a>
                 <div class="dropdown-menu" aria-labelledby="userMenuDropDown">
-                    <a class="dropdown-item" href="/login">Login</a>
-                    <a class="dropdown-item" href="/register">Register</a>
+                    @if (Auth::check())
+                        <a class="dropdown-item" href="/dashboard">Account settings</a>
+                        <a class="dropdown-item" href="/logout">Logout</a>
+                    @else
+                        <a class="dropdown-item" href="/login">Login</a>
+                        <a class="dropdown-item" href="/register">Register</a>
+                    @endif
                 </div>
             </li>
         </ul>

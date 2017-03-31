@@ -17,11 +17,12 @@ class CreateProductsTable extends Migration
             $table->increments('id');
             $table->string('name');
             $table->double('price');
+            $table->text('category');
             $table->text('description');
-            $table->string('category');
-            $table->string('thumbnail');
             $table->timestamps();
         });
+
+        DB::statement("ALTER TABLE products ADD thumbnail LONGBLOB");
     }
 
     /**
