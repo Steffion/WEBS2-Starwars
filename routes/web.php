@@ -19,6 +19,9 @@ Route::get('about', function () {
     return view('about');
 });
 
+Route::get('sale', function () {
+    return view('sale');
+});
 Route::get('/products', 'ProductController@index');
 Route::get('/products/figures', 'ProductController@figures');
 Route::get('/products/clothes', 'ProductController@clothes');

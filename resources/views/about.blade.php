@@ -19,6 +19,7 @@
             <img src="img/BestTeamEver.jpg">
         </div>
         <div class="info">
+            <br>
             <div class="title">
                 Starwars Webshop
             </div>
