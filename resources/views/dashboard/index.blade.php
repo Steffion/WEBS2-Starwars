@@ -9,6 +9,7 @@
                 <a class="list-group-item list-group-item-action disabled">Admin&nbsp;<i class="fa fa-caret-down" aria-hidden="true"></i></a>
                 <a href="/dashboard/products" class="list-group-item list-group-item-action {{ (Request::is('dashboard/products*') ? 'active' : '') }}">&nbsp;&nbsp;Products</a>
                 <a href="/dashboard/users" class="list-group-item list-group-item-action {{ (Request::is('dashboard/users*') ? 'active' : '') }}">&nbsp;&nbsp;Users</a>
+                <a href="/dashboard/categories" class="list-group-item list-group-item-action {{ (Request::is('dashboard/categories*') ? 'active' : '') }}">&nbsp;&nbsp;Categories</a>
             </div>
         </div>
 

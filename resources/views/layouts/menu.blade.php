@@ -1,3 +1,5 @@
+{{--{{ dd($categories) }}--}}
+
 <nav class="navbar navbar-toggleable-md navbar-light bg-faded">
     <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
             data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
@@ -11,18 +13,29 @@
             <li class="nav-item">
                 <a class="nav-link" href="/">Home</a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" href="/products/figures">Figures</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="/products/clothes">Clothes</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="/products/movies">Movies</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="/products/plushies">Plushies</a>
-            </li>
+            @foreach($categories as $category)
+                @continue($category->parent != null)
+
+                @if ($category->children->count())
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="/products/{{ $category->name }}"
+                           id="navbarDropdownMenu{{ $category->name }}"
+                           data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            {{ ucfirst($category->name) }}
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenu{{ $category->name }}">
+                            @foreach ($category->children as $child)
+                                <a class="dropdown-item"
+                                   href="/products/{{ $child->name }}">{{ ucfirst($child->name) }}</a>
+                            @endforeach
+                        </div>
+                    </li>
+                @else
+                    <li class="nav-item">
+                        <a class="nav-link" href="/products/{{ $category->name }}">{{ ucfirst($category->name) }}</a>
+                    </li>
+                @endif
+            @endforeach
             <li class="nav-item">
                 <a class="nav-link" href="/sale">Sale</a>
             </li>

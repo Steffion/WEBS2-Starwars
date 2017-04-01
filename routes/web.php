@@ -39,5 +39,12 @@ Route::get('/dashboard/users/edit/{user}', 'UsersManageController@edit');
 Route::post('/dashboard/users/edit/{user}', 'UsersManageController@update');
 Route::get('/dashboard/users/delete/{user}', 'UsersManageController@destroy');
 
+Route::get('/dashboard/categories', 'CategoriesManageController@index');
+Route::get('/dashboard/categories/create', 'CategoriesManageController@create');
+Route::post('/dashboard/categories/create', 'CategoriesManageController@store');
+Route::get('/dashboard/categories/edit/{category}', 'CategoriesManageController@edit');
+Route::post('/dashboard/categories/edit/{category}', 'CategoriesManageController@update');
+Route::get('/dashboard/categories/delete/{category}', 'CategoriesManageController@destroy');
+
 Auth::routes();
 Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout');

@@ -26,5 +26,15 @@ class CategorySeeder extends Seeder
         DB::table('categories')->insert([
             'name' => 'plushies'
         ]);
+
+        DB::table('categories')->insert([
+            'name' => 'male',
+            'parent' => 'clothes'
+        ]);
+
+        DB::table('categories')->insert([
+            'name' => 'female',
+            'parent' => 'clothes'
+        ]);
     }
 }
