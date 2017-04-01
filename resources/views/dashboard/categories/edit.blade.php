@@ -29,7 +29,7 @@
             </div>
         </div>
         <div class="form-group row float-left">
-            <a href="/dashboard/categories/delete/{{ $category->id }}" class="btn btn-danger m-2">
+            <a href="/dashboard/categories/delete/{{ $category->name }}" class="btn btn-danger m-2">
                 <i class="fa fa-trash-o" aria-hidden="true"></i> Delete category
             </a>
         </div>

@@ -98,7 +98,7 @@ class CategoriesManageController extends Controller
 
         $category->name = request('name');
 
-        if (request('parent') != null) {
+        if (request('parent') != 'None') {
             $category->parent = strtolower(request('parent'));
         }
 
