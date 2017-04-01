@@ -15,6 +15,10 @@ Route::get('/', function () {
     return view('index');
 });
 
+Route::get('about', function () {
+    return view('about');
+});
+
 Route::get('/products', 'ProductController@index');
 Route::get('/products/figures', 'ProductController@figures');
 Route::get('/products/clothes', 'ProductController@clothes');
@@ -22,6 +26,7 @@ Route::get('/products/movies', 'ProductController@movies');
 Route::get('/products/plushies', 'ProductController@plushies');
 Route::get('/cart', 'ShoppingCartController@index');
 Route::get('/products/{product}', 'ProductController@show');
+
 
 Route::get('/dashboard', 'DashboardController@index');
 

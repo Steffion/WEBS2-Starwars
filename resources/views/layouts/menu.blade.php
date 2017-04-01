@@ -42,6 +42,9 @@
             <li class="nav-item">
                 <a class="nav-link" href="/cart">Shopping Cart</a>
             </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/about"> About us</a>
+            </li>
         </ul>
         <ul class="navbar-nav ml-auto">
             <li class="nav-item dropdown">
