@@ -1,13 +1,122 @@
-<?php
-/**
- * Created by PhpStorm.
- * User: kokke
- * Date: 20-3-2017
- * Time: 15:05
- */
-?>
+@extends('layouts.master')
+
+@section('content')
 
 <p>
-
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12 col-md-10 col-md-offset-1">
+            <table class="table table-hover">
+                <thead>
+                <tr>
+                    <th>Product</th>
+                    <th>Quantity</th>
+                    <th class="text-center">Price</th>
+                    <th class="text-center">Total</th>
+                    <th> </th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td class="col-sm-8 col-md-6">
+                        <div class="media">
+                            <div class="media-body">
+                                <h4 class="media-heading"><a href="#">Product name</a></h4>
+                                <span>Status: </span><span class="text-success"><strong> </strong></span>
+                            </div>
+                        </div></td>
+                    <td class="col-sm-1 col-md-1" style="text-align: center">
+                        <input type="email" class="form-control" id="exampleInputEmail1" value="3">
+                    </td>
+                    <td class="col-sm-1 col-md-1 text-center"><strong> </strong></td>
+                    <td class="col-sm-1 col-md-1 text-center"><strong> </strong></td>
+                    <td class="col-sm-1 col-md-1">
+                        <button type="button" class="btn btn-danger">
+                            <span class="glyphicon glyphicon-remove"></span> Remove
+                        </button></td>
+                </tr>
+                <tr>
+                    <td class="col-md-6">
+                        <div class="media">
+                            <div class="media-body">
+                                <h4 class="media-heading"><a href="#">Product name</a></h4>
+                                <span>Status: </span><span class="text-warning"><strong>  </strong></span>
+                            </div>
+                        </div></td>
+                    <td class="col-md-1" style="text-align: center">
+                        <input type="email" class="form-control" id="exampleInputEmail1" value="2">
+                    </td>
+                    <td class="col-md-1 text-center"><strong> </strong></td>
+                    <td class="col-md-1 text-center"><strong> </strong></td>
+                    <td class="col-md-1">
+                        <button type="button" class="btn btn-danger">
+                            <span class="glyphicon glyphicon-remove"></span> Remove
+                        </button></td>
+                </tr>
+                <tr>
+                    <td class="col-sm-8 col-md-6">
+                        <div class="media">
+                            <div class="media-body">
+                                <h4 class="media-heading"><a href="#">Product name</a></h4>
+                                <span>Status: </span><span class="text-success"><strong> </strong></span>
+                            </div>
+                        </div></td>
+                    <td class="col-sm-1 col-md-1" style="text-align: center">
+                        <input type="email" class="form-control" id="exampleInputEmail1" value="3">
+                    </td>
+                    <td class="col-sm-1 col-md-1 text-center"><strong> </strong></td>
+                    <td class="col-sm-1 col-md-1 text-center"><strong> </strong></td>
+                    <td class="col-sm-1 col-md-1">
+                        <button type="button" class="btn btn-danger">
+                            <span class="glyphicon glyphicon-remove"></span> Remove
+                        </button></td>
+                </tr>
+                <tr>
+                    <td class="col-sm-8 col-md-6">
+                        <div class="media">
+                            <div class="media-body">
+                                <h4 class="media-heading"><a href="#">Product name</a></h4>
+                                <span>Status: </span><span class="text-success"><strong> </strong></span>
+                            </div>
+                        </div></td>
+                    <td class="col-sm-1 col-md-1" style="text-align: center">
+                        <input type="email" class="form-control" id="exampleInputEmail1" value="3">
+                    </td>
+                    <td class="col-sm-1 col-md-1 text-center"><strong> </strong></td>
+                    <td class="col-sm-1 col-md-1 text-center"><strong> </strong></td>
+                    <td class="col-sm-1 col-md-1">
+                        <button type="button" class="btn btn-danger">
+                            <span class="glyphicon glyphicon-remove"></span> Remove
+                        </button></td>
+                </tr>
+                </tbody>
+                <tfoot>
+                <tr>
+                    <td>   </td>
+                    <td>   </td>
+                    <td>   </td>
+                    <td><h5>Subtotal<br>Estimated shipping</h5><h3>Total</h3></td>
+                    <td class="text-right"><h5><strong> <br> </strong></h5><h3> </h3></td>
+                </tr>
+                <tr>
+                    <td>   </td>
+                    <td>   </td>
+                    <td>   </td>
+                    <td>
+                        <button type="button" class="btn btn-default">
+                            <span class="glyphicon glyphicon-shopping-cart"></span> Continue Shopping
+                        </button></td>
+                    <td>
+                        <button type="button" class="btn btn-success">
+                            Checkout <span class="glyphicon glyphicon-play"></span>
+                        </button></td>
+                </tr>
+                </tfoot>
+            </table>
+        </div>
+    </div>
+</div>
 
 </p>
+
+@endsection

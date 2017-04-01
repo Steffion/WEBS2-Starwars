@@ -1,7 +1,7 @@
 @extends('layouts.master')
 
 @section('content')
-    <div class="col-lg-10">
+
         <p>
             Star Wars is an American epic space opera franchise, centered on a film series created by George Lucas.
             It depicts the adventures of various characters "a long time ago in a galaxy far, far away". <br>
@@ -23,14 +23,48 @@
             making Star Wars the second highest-grossing media franchise of all time.
         </p>
 
-        <h2> Characters </h2>
-
         <br>
         <br>
 
-        <h2> Darth Vader </h2>
-        <img id="imgGeneralInfo"  src="img/DarthVader.jpg">
 
-        {{-- TODO insert characters --}}
-    </div>
+        <div class="jumbotron">
+            <div class="container">
+                <h2>Characters</h2>
+            </div>
+        </div>
+
+
+        <div class="jumbotron">
+            <div class="container">
+                <h2>Anakin</h2>
+                <p>Anakin Skywalker was a Force-sensitive human male who served the Galactic Republic as a Jedi Knight, and later the Galactic Empire as the Sith Lord Darth Vader. </p>
+
+            </div>
+        </div>
+
+        <div class="jumbotron">
+            <div class="container">
+                <h2>R2D2</h2>
+                <p>R2-D2 is a fictional robot character in the Star Wars franchise created by George Lucas, who appears in the original trilogy, the prequel trilogy, the sequel trilogy, and Rogue One. A small astromech droid, R2-D2 is a major character and appears in all Star Wars films to date.  </p>
+
+            </div>
+        </div>
+
+        <div class="jumbotron">
+            <div class="container">
+                <h2>Chewbacca</h2>
+                <p>Chewbacca, known affectionately to his friends as Chewie, was a male Wookiee warrior, smuggler, and resistance fighter who fought in the Clone Wars, the Galactic Civil War, and the conflict between the First Order and the Resistance. </p>
+
+            </div>
+        </div>
+
+        <div class="jumbotron">
+            <div class="container">
+                <h2>Leia Organa</h2>
+                <p>Princess Leia Organa of Alderaan, later known as General Leia Organa, is a fictional character in the Star Wars franchise, portrayed in films by Carrie Fisher. Introduced in the original Star Wars film in 1977, Leia is princess of the planet Alderaan, a member of the Imperial Senate and an agent of the Rebel Alliance.  </p>
+
+            </div>
+        </div>
+
+
 @endsection
