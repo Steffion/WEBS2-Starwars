@@ -38,6 +38,7 @@
             <div class="container">
                 <h2>Anakin</h2>
                 <p>Anakin Skywalker was a Force-sensitive human male who served the Galactic Republic as a Jedi Knight, and later the Galactic Empire as the Sith Lord Darth Vader. </p>
+
             </div>
         </div>
 

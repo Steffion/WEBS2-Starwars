@@ -150,18 +150,77 @@ class ProductSeeder extends Seeder
         DB::table('products')->insert([
             'name' => 'Darth Vader',
             'price' => '8',
-            'description' => ' 10 inch ',
+            'description' => '10 inch',
             'category' => 'plushies',
             'thumbnail' => base64_encode(file_get_contents('http://76.my/Malaysia/changi-airport-special-edition-star-wars-plush-toy-darth-vader-j-depot-1602-11-j_depot@11.jpg' ))
          ]);
         DB::table('products')->insert([
             'name' => 'Bundle',
             'price' => '100',
-            'description' => ' 10 inch each',
+            'description' => '10 inch each',
             'category' => 'plushies',
             'thumbnail' => base64_encode(file_get_contents('https://www.silverkris.com/sites/default/files/2015/1511-starwars-635.jpg' ))
         ]);
-      
+
+        // FIGURES
+
+        DB::table('products')->insert([
+            'name' => 'Storm Trooper',
+            'price' => '20',
+            'description' => '12 inch',
+            'category' => 'figures',
+            'thumbnail' => base64_encode(file_get_contents('https://dyn0.media.forbiddenplanet.com/products/112907a.jpg' ))
+        ]);
+        DB::table('products')->insert([
+            'name' => 'Chewbacca',
+            'price' => '20',
+            'description' => '12 inch',
+            'category' => 'figures',
+            'thumbnail' => base64_encode(file_get_contents('http://images.fun.com/products/34910/1-1/star-wars-episode-7-chewbacca-black-series-action-figure.jpg' ))
+        ]);
+        DB::table('products')->insert([
+            'name' => 'Bundle',
+            'price' => '50',
+            'description' => '12 inch',
+            'category' => 'figures',
+            'thumbnail' => base64_encode(file_get_contents('http://images.brickset.com/news/swconstraction2.jpg' ))
+        ]);
+        DB::table('products')->insert([
+            'name' => 'Darth Vader',
+            'price' => '20',
+            'description' => '11 inch',
+            'category' => 'figures',
+            'thumbnail' => base64_encode(file_get_contents('https://images-na.ssl-images-amazon.com/images/I/91cs1G8oLPL._SL1500_.jpg' ))
+        ]);
+        DB::table('products')->insert([
+            'name' => 'Han Solo',
+            'price' => '20',
+            'description' => '11 inch',
+            'category' => 'figures',
+            'thumbnail' => base64_encode(file_get_contents('https://i5.walmartimages.ca/images/Enlarge/445/6_2/999999-630509394456_2.jpg' ))
+        ]);
+        DB::table('products')->insert([
+            'name' => 'C3PO',
+            'price' => '20',
+            'description' => '11 inch',
+            'category' => 'figures',
+            'thumbnail' => base64_encode(file_get_contents('http://www.entertainmentearth.com/images/AUTOIMAGES/BA77974lg.jpg' ))
+        ]);
+        DB::table('products')->insert([
+            'name' => 'R2D2',
+            'price' => '20',
+            'description' => '11 inch',
+            'category' => 'figures',
+            'thumbnail' => base64_encode(file_get_contents('https://www.hasbro.com/common/productimages/en_GB/4da6b67c50569047f51a5fe1c1604c0f/4DA7A7F150569047F5A773DB9F4502ED.jpg' ))
+        ]);
+        DB::table('products')->insert([
+            'name' => 'Jabba The Hut',
+            'price' => '30',
+            'description' => '13 inch',
+            'category' => 'figures',
+            'thumbnail' => base64_encode(file_get_contents('http://tvandfilmtoys.com/wp-content/uploads/2009/11/slaveleia_top.jpg' ))
+        ]);
+
 
     }
 
