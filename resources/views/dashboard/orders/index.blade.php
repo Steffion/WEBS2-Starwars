@@ -1,4 +1,4 @@
-<h2>Your orders</h2>
+<h2>{{ $title }}</h2>
 
 <ul>
     @foreach($orders as $order)

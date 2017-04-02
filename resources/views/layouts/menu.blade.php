@@ -39,9 +39,6 @@
                 <a class="nav-link sliding-middle-out" href="/sale">Sale</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link sliding-middle-out" href="/cart">Shopping Cart</a>
-            </li>
-            <li class="nav-item">
                 <a class="nav-link sliding-middle-out" href="/about">About us</a>
             </li>
         </ul>
@@ -51,6 +48,9 @@
             </button>
         </form>
         <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link sliding-middle-out" href="/cart"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
+            </li>
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" id="userMenuDropDown" data-toggle="dropdown" aria-haspopup="true"
                    aria-expanded="false">

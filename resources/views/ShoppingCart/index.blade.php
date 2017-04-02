@@ -26,7 +26,6 @@
                     <tr>
                         <th scope="row" class="col-md">{{ $product->name }}</th>
                         <td>
-                            {{--<input class="form-control" type="number" value="{{ $quantity }}" id="quantity">--}}
                             {{ $quantity }}
                             <a href="/cart/add/{{ $product->id }}"><i class="fa fa-plus-circle" aria-hidden="true"></i></a>
                             <a href="/cart/remove/{{ $product->id }}"><i class="fa fa-minus-circle" aria-hidden="true"></i></a>
