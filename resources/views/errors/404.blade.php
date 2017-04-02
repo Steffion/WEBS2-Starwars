@@ -7,8 +7,6 @@
             <p>You are not supposed to be here!</p>
             <p>We are sorry, but we were unable to process your request. Please try again or check the link you
                 entered.</p>
-            <p>Send this to the webmaster to help him fixing this issue:</p>
-            <code>{{ $exception }}</code>
         </div>
     </div>
 @endsection
