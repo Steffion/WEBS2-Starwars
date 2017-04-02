@@ -17,7 +17,7 @@
             @endforeach
         @else
             <div class="mx-auto">
-                <h3>This category is empty.</h3>
+                <h3>No results found.</h3>
             </div>
         @endif
     </div>

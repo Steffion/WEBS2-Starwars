@@ -46,7 +46,7 @@
             </li>
         </ul>
         <form class="form-inline my-2 my-lg-0" action="/search" method="get">
-            <input class="form-control mr-sm-2" type="text" name="q" placeholder="Search" value="{{ $_GET['q'] }}">
+            <input class="form-control mr-sm-2" type="text" name="q" placeholder="Search" value="{{ (isset($_GET['q']) ? $_GET['q'] : "") }}">
             <button class="btn my-2 my-sm-0 btn-secondary" type="submit"><i class="fa fa-search" aria-hidden="true"></i>
             </button>
         </form>
