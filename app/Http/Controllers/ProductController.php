@@ -25,4 +25,9 @@ class ProductController extends Controller
     {
         return view('products.show', compact('product'));
     }
+
+    public function search() {
+        $products = Product::where('name', 'like', '%' . $_GET['q'] . '%')->paginate(12);
+        return view('products.index', compact('products'));
+    }
 }

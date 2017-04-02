@@ -26,6 +26,8 @@ Route::get('sale', function () {
     return view('sale');
 });
 
+Route::get('/search', 'ProductController@search');
+
 Route::get('/products', 'ProductController@index');
 Route::get('/products/{category}', 'ProductController@filter');
 Route::get('/products/view/{product}', 'ProductController@show');
