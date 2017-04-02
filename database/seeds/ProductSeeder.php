@@ -26,6 +26,7 @@ class ProductSeeder extends Seeder
 //            ]);
 //        }
 
+// MOVIES
         DB::table('products')->insert([
             'name' => 'Rogue One',
             'price' => '20',
@@ -96,6 +97,72 @@ class ProductSeeder extends Seeder
             'description' => 'Stranded on the desert planet Tatooine after rescuing young Queen Amidala from the impending invasion of Naboo.',
             'category' => 'movies',
             'thumbnail' => base64_encode(file_get_contents('https://i.ytimg.com/vi/Xv5OAeerXzs/hqdefault.jpg'))
+        ]);
+
+
+// PLUSHIES
+        DB::table('products')->insert([
+            'name' => 'Rey',
+            'price' => '10',
+            'description' => ' 10 inch ',
+            'category' => 'plushies',
+            'thumbnail' => base64_encode(file_get_contents('http://www.theforcegifts.com/img/prods/B017Y8RD0K.jpg'))
+        ]);
+
+        DB::table('products')->insert([
+            'name' => 'Chewie',
+            'price' => '12',
+            'description' => ' 10 inch ',
+            'category' => 'plushies',
+            'thumbnail' => base64_encode(file_get_contents('https://images-na.ssl-images-amazon.com/images/I/71QeOg9t2xL._SL1500_.jpg'))
+        ]);
+
+        DB::table('products')->insert([
+            'name' => 'Bundle',
+            'price' => '40',
+            'description' => '10 inch ',
+            'category' => 'plushies',
+            'thumbnail' => base64_encode(file_get_contents('https://media1.popsugar-assets.com/files/thumbor/VwNTGn8hdlOiIfmerEb2izRrbZw/fit-in/1024x1024/filters:format_auto-!!-:strip_icc-!!-/upl1/1/15111/01_2008/e21c45bd815a0a5f_star-wars-stuffed-animals.jpg'))
+        ]);
+
+        DB::table('products')->insert([
+            'name' => 'Yoda',
+            'price' => '11',
+            'description' => '10 inch ',
+            'category' => 'plushies',
+            'thumbnail' => base64_encode(file_get_contents('http://www.hallmark.com/dw/image/v2/AALB_PRD/on/demandware.static/-/Sites-hallmark-master/default/dw6ae386ce/images/finished-goods/itty-bitty-yoda-stuffed-animal-root-1kid3238_1470_1.jpg?sfrm=jpg'))
+        ]);
+
+        DB::table('products')->insert([
+            'name' => 'R2D2',
+            'price' => '10',
+            'description' => ' 10 inch ',
+            'category' => 'plushies',
+            'thumbnail' => base64_encode(file_get_contents('http://www.entertainmentearth.com/images/AUTOIMAGES/UT00239Jlg.jpg'))
+        ]);
+
+        DB::table('products')->insert([
+            'name' => 'BB8',
+            'price' => '20',
+            'description' => ' 10 inch ',
+            'category' => 'plushies',
+            'thumbnail' => base64_encode(file_get_contents('http://www.hallmark.com/dw/image/v2/AALB_PRD/on/demandware.static/-/Sites-hallmark-master/default/dw8d301383/images/finished-goods/itty-bittys-star-wars-bb8-stuffed-animal-root-1kdd1084_1470_1.jpg?sfrm=jpg'))
+        ]);
+
+        DB::table('products')->insert([
+            'name' => 'Darth Vader',
+            'price' => '8',
+            'description' => ' 10 inch ',
+            'category' => 'plushies',
+            'thumbnail' => base64_encode(file_get_contents('http://76.my/Malaysia/changi-airport-special-edition-star-wars-plush-toy-darth-vader-j-depot-1602-11-j_depot@11.jpg'))
+        ]);
+
+        DB::table('products')->insert([
+            'name' => 'Bundle',
+            'price' => '100',
+            'description' => ' 10 inch each',
+            'category' => 'plushies',
+            'thumbnail' => base64_encode(file_get_contents('https://www.silverkris.com/sites/default/files/2015/1511-starwars-635.jpg'))
         ]);
     }
 }
