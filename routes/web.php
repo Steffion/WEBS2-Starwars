@@ -39,6 +39,8 @@ Route::get('/cart/checkout', 'ShoppingCartController@checkout');
 
 Route::get('/dashboard', 'DashboardController@index');
 
+Route::get('/dashboard/orders', 'OrdersController@index');
+
 Route::get('/dashboard/products', 'ProductsManageController@index');
 Route::get('/dashboard/products/create', 'ProductsManageController@create');
 Route::post('/dashboard/products/create', 'ProductsManageController@store');
