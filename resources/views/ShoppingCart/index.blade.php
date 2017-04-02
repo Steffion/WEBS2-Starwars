@@ -64,8 +64,8 @@
             @endif
         </table>
 
-        <div class="container row float-right">
-            <div class="form-group">
+            
+            <div class="form-group pull-right">
                 <a class="btn m-2 btn-danger" href="/cart/clear">
                     <i class="fa fa-trash" aria-hidden="true"></i> Clear shopping cart
                 </a>
@@ -77,5 +77,7 @@
                 </a>
             </div>
         </div>
-    </div>
+    <br>
+    <br>
+
 @endsection
