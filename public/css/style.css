@@ -221,3 +221,7 @@ hr {
     -moz-box-sizing: border-box;
     box-sizing: border-box;
 }
+
+.carouseltext{
+    color: #b64419;
+}

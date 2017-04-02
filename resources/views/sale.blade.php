@@ -20,9 +20,9 @@
         </ol>
         <div class="carousel-inner" role="listbox">
             <div class="carousel-item active">
-                <img class="d-block img-fluid" src="img/Figure.png" alt="First slide" width="500" height="500">
+                <img class="d-block img-fluid mx-auto" src="img/Figure.jpg" alt="First slide" width="500" height="500">
                 <div class="carousel-caption d-none d-md-block">
-                    <h3>all figures 50% off!</h3>
+                    <h2>all figures 50% off!</h2>
                     <button>
                         Buy Now!
                     </button>
@@ -30,9 +30,9 @@
 
             </div>
             <div class="carousel-item">
-                <img class="d-block img-fluid" src="img/Plushie.jpg" alt="Second slide" width="500" height="500">
+                <img class="d-block img-fluid mx-auto" src="img/Plushie.jpg" alt="Second slide" width="500" height="500">
                 <div class="carousel-caption d-none d-md-block">
-                    <h3> Limited time only! Yoda plushie now for $10! </h3>
+                    <h2> Limited time only! 10$ </h2>
                     <button>
                         Buy Now!
                     </button>
@@ -40,9 +40,9 @@
 
             </div>
             <div class="carousel-item">
-                <img class="d-block img-fluid" src="img/Shirt.png" alt="Third slide" width="500" height="500">
+                <img class="d-block img-fluid mx-auto" src="img/Shirt.jpg" alt="Third slide" width="500" height="500">
                 <div class="carousel-caption d-none d-md-block">
-                    <h3>All womens shirts 20% off!</h3>
+                    <h2>All womens shirts 20% off!</h2>
                     <p>Sizes xs / m / xl</p>
                     <button>
                         Buy Now!
