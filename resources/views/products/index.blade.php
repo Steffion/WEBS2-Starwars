@@ -10,7 +10,7 @@
                 {{ $product->description }}
 
                 <h3>Price: ${{ $product->price }}.- USD</h3>
-                <button class="shoppingCart" type="button">Add to shopping cart</button>
+                <a class="shoppingCart" href="/cart/add/{{ $product->id }}">Add to shopping cart</a>
             </div>
         @endforeach
     </div>

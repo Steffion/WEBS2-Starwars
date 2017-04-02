@@ -2,121 +2,77 @@
 
 @section('content')
 
-<p>
-<div class="container">
-    <div class="row">
-        <div class="col-sm-12 col-md-10 col-md-offset-1">
-            <table class="table table-hover">
-                <thead>
-                <tr>
-                    <th>Product</th>
-                    <th>Quantity</th>
-                    <th class="text-center">Price</th>
-                    <th class="text-center">Total</th>
-                    <th> </th>
-                </tr>
-                </thead>
+    <div class="panel-body">
+        <?php $totalsum = 0 ?>
+
+        <table class="table table-hover">
+            <thead>
+            <tr>
+                <th>Product</th>
+                <th>Quantity</th>
+                <th>Price (p.p.)</th>
+                <th>Total</th>
+                <th></th>
+            </tr>
+            </thead>
+
+            @if(session()->has('cart'))
+
                 <tbody>
-                <tr>
-                    <td class="col-sm-8 col-md-6">
-                        <div class="media">
-                            <div class="media-body">
-                                <h4 class="media-heading"><a href="#">Product name</a></h4>
-                                <span>Status: </span><span class="text-success"><strong> </strong></span>
-                            </div>
-                        </div></td>
-                    <td class="col-sm-1 col-md-1" style="text-align: center">
-                        <input type="email" class="form-control" id="exampleInputEmail1" value="3">
-                    </td>
-                    <td class="col-sm-1 col-md-1 text-center"><strong> </strong></td>
-                    <td class="col-sm-1 col-md-1 text-center"><strong> </strong></td>
-                    <td class="col-sm-1 col-md-1">
-                        <button type="button" class="btn btn-danger">
-                            <span class="glyphicon glyphicon-remove"></span> Remove
-                        </button></td>
-                </tr>
-                <tr>
-                    <td class="col-md-6">
-                        <div class="media">
-                            <div class="media-body">
-                                <h4 class="media-heading"><a href="#">Product name</a></h4>
-                                <span>Status: </span><span class="text-warning"><strong>  </strong></span>
-                            </div>
-                        </div></td>
-                    <td class="col-md-1" style="text-align: center">
-                        <input type="email" class="form-control" id="exampleInputEmail1" value="2">
-                    </td>
-                    <td class="col-md-1 text-center"><strong> </strong></td>
-                    <td class="col-md-1 text-center"><strong> </strong></td>
-                    <td class="col-md-1">
-                        <button type="button" class="btn btn-danger">
-                            <span class="glyphicon glyphicon-remove"></span> Remove
-                        </button></td>
-                </tr>
-                <tr>
-                    <td class="col-sm-8 col-md-6">
-                        <div class="media">
-                            <div class="media-body">
-                                <h4 class="media-heading"><a href="#">Product name</a></h4>
-                                <span>Status: </span><span class="text-success"><strong> </strong></span>
-                            </div>
-                        </div></td>
-                    <td class="col-sm-1 col-md-1" style="text-align: center">
-                        <input type="email" class="form-control" id="exampleInputEmail1" value="3">
-                    </td>
-                    <td class="col-sm-1 col-md-1 text-center"><strong> </strong></td>
-                    <td class="col-sm-1 col-md-1 text-center"><strong> </strong></td>
-                    <td class="col-sm-1 col-md-1">
-                        <button type="button" class="btn btn-danger">
-                            <span class="glyphicon glyphicon-remove"></span> Remove
-                        </button></td>
-                </tr>
-                <tr>
-                    <td class="col-sm-8 col-md-6">
-                        <div class="media">
-                            <div class="media-body">
-                                <h4 class="media-heading"><a href="#">Product name</a></h4>
-                                <span>Status: </span><span class="text-success"><strong> </strong></span>
-                            </div>
-                        </div></td>
-                    <td class="col-sm-1 col-md-1" style="text-align: center">
-                        <input type="email" class="form-control" id="exampleInputEmail1" value="3">
-                    </td>
-                    <td class="col-sm-1 col-md-1 text-center"><strong> </strong></td>
-                    <td class="col-sm-1 col-md-1 text-center"><strong> </strong></td>
-                    <td class="col-sm-1 col-md-1">
-                        <button type="button" class="btn btn-danger">
-                            <span class="glyphicon glyphicon-remove"></span> Remove
-                        </button></td>
-                </tr>
+                @foreach(session('cart') as $item)
+                    <?php $product = \App\Product::find($item['id']) ?>
+                    <?php $quantity = $item['quantity'] ?>
+
+                    <tr>
+                        <th scope="row" class="col-md">{{ $product->name }}</th>
+                        <td>
+                            <input class="form-control" type="number" value="{{ $quantity }}" id="quantity">
+                        </td>
+                        <td>{{ $product->price }} USD</td>
+                        <td>{{ $product->price * $quantity }} USD</td>
+                        <?php $totalsum += $product->price * $quantity ?>
+                        <td>
+                            <a class="btn btn-danger" href="/cart/remove/{{ $product->id }}">
+                                <i class="fa fa-trash" aria-hidden="true"></i> Remove
+                            </a>
+                        </td>
+                    </tr>
+                @endforeach
+
                 </tbody>
                 <tfoot>
                 <tr>
-                    <td>   </td>
-                    <td>   </td>
-                    <td>   </td>
-                    <td><h5>Subtotal<br>Estimated shipping</h5><h3>Total</h3></td>
-                    <td class="text-right"><h5><strong> <br> </strong></h5><h3> </h3></td>
-                </tr>
-                <tr>
-                    <td>   </td>
-                    <td>   </td>
-                    <td>   </td>
-                    <td>
-                        <button type="button" class="btn btn-default">
-                            <span class="glyphicon glyphicon-shopping-cart"></span> Continue Shopping
-                        </button></td>
-                    <td>
-                        <button type="button" class="btn btn-success">
-                            Checkout <span class="glyphicon glyphicon-play"></span>
-                        </button></td>
+                    <td></td>
+                    <td></td>
+                    <td>Total<br>Shipping<br>
+                        <h3><strong>Subtotal</strong></h3></td>
+                    <td colspan="2">{{ $totalsum }} USD<br>10,- USD<br>
+                        <h3><strong>{{ $totalsum + 10 }} USD</strong></h3></td>
                 </tr>
                 </tfoot>
-            </table>
+            @else
+                <tbody>
+                <tr>
+                    <td class="text-center" colspan="5">
+                        <h3>Your cart is empty.</h3>
+                    </td>
+                </tr>
+                </tbody>
+            @endif
+        </table>
+
+        <div class="container row float-right">
+            <div class="form-group">
+                <a class="btn m-2 btn-danger" href="/cart/clear">
+                    <i class="fa fa-trash" aria-hidden="true"></i> Clear shopping cart
+                </a>
+                <button onclick="window.history.back()" type="button" class="btn m-2">
+                    <i class="fa fa-arrow-right" aria-hidden="true"></i> Continue shopping
+                </button>
+                <button type="submit" class="btn btn-success m-2">
+                    <i class="fa fa-shopping-cart" aria-hidden="true"></i> Checkout
+                </button>
+            </div>
         </div>
     </div>
-</div>
-
-</p>
-
 @endsection

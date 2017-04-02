@@ -20,8 +20,12 @@ Route::get('/products/figures', 'ProductController@figures');
 Route::get('/products/clothes', 'ProductController@clothes');
 Route::get('/products/movies', 'ProductController@movies');
 Route::get('/products/plushies', 'ProductController@plushies');
-Route::get('/cart', 'ShoppingCartController@index');
 Route::get('/products/{product}', 'ProductController@show');
+
+Route::get('/cart', 'ShoppingCartController@index');
+Route::get('/cart/add/{product}', 'ShoppingCartController@addToCart');
+Route::get('/cart/remove/{product}', 'ShoppingCartController@removeFromCart');
+Route::get('/cart/clear', 'ShoppingCartController@destroy');
 
 Route::get('/dashboard', 'DashboardController@index');
 

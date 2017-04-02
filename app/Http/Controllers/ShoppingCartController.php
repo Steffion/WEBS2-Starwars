@@ -12,7 +12,29 @@ class ShoppingCartController extends Controller
 {
     public function index()
     {
-
         return view('ShoppingCart.index');
+    }
+
+    public function addToCart($id)
+    {
+        if (session('cart.' . $id) == null) {
+            session()->put('cart.' . $id, ['id' => $id, 'quantity' => 1]);
+        } else {
+            session()->put('cart.' . $id, ['id' => $id, 'quantity' => session('cart.' . $id)['quantity'] + 1]);
+        }
+
+        return redirect('/cart');
+    }
+
+    public function removeFromCart($id)
+    {
+        session()->forget('cart.' . $id);
+        return redirect('/cart');
+    }
+
+    public function destroy()
+    {
+        session()->forget('cart');
+        return redirect('/cart');
     }
 }

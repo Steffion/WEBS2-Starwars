@@ -9,7 +9,7 @@
         <th>Name</th>
         <th>E-mail</th>
         <th>User since</th>
-        <th>Logged in</th>
+        <th>Remember login</th>
         <th></th>
     </tr>
     </thead>
