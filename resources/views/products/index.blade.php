@@ -2,17 +2,24 @@
 
 @section('content')
     <div class="row">
-        @foreach($products as $product)
-            <div class="col-lg-3">
-                <h2><a href="/products/{{ $product->id }}">{{ $product->name }}</a></h2>
-                <img id="RO" src="data:image/*;base64,{{ $product->thumbnail }}"/>
 
-                {{ $product->description }}
+        @if($products->count() != 0)
+            @foreach($products as $product)
+                <div class="col-lg-3">
+                    <h2><a href="/products/view/{{ $product->id }}">{{ $product->name }}</a></h2>
+                    <img id="RO" src="data:image/*;base64,{{ $product->thumbnail }}"/>
 
-                <h3>Price: ${{ $product->price }} USD</h3>
-                <a class="shoppingCart" href="/cart/add/{{ $product->id }}">Add to shopping cart</a>
+                    {{ $product->description }}
+
+                    <h3>Price: ${{ $product->price }} USD</h3>
+                    <a class="shoppingCart" href="/cart/add/{{ $product->id }}">Add to shopping cart</a>
+                </div>
+            @endforeach
+        @else
+            <div class="mx-auto">
+                <h3>This category is empty.</h3>
             </div>
-        @endforeach
+        @endif
     </div>
     <div class="row center-block">
         {{ $products->links() }}
