@@ -28,7 +28,23 @@ class ShoppingCartController extends Controller
 
     public function removeFromCart($id)
     {
+        if (session('cart.' . $id)['quantity'] == 1) {
+            return $this->clearFromCart($id);
+        } else {
+            session()->put('cart.' . $id, ['id' => $id, 'quantity' => session('cart.' . $id)['quantity'] - 1]);
+        }
+
+        return redirect('/cart');
+    }
+
+    public function clearFromCart($id)
+    {
         session()->forget('cart.' . $id);
+
+        if (session('cart') == null) {
+            return $this->destroy();
+        }
+
         return redirect('/cart');
     }
 
