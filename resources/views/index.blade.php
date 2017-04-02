@@ -2,6 +2,21 @@
 
 @section('content')
 
+    <div class="container">
+        <div class="row">
+            <ul class="breadcrumb">
+                <li class="completed"><a href="javascript:void(0);">Home</a></li>
+                <li class="active"><a href="javascript:void(0);">Figures</a></li>
+                <li class="active"><a href="javascript:void(0);">Clothes</a></li>
+                <li class="active"><a href="javascript:void(0);">Movies</a></li>
+                <li class="active"><a href="javascript:void(0);">Plushies</a></li>
+                <li class="active"><a href="javascript:void(0);">Sale</a></li>
+                <li class="active"><a href="javascript:void(0);">Shopping Cart</a></li>
+                <li class="active"><a href="javascript:void(0);">About Us</a></li>
+            </ul>
+        </div>
+    </div>
+
         <p>
             Star Wars is an American epic space opera franchise, centered on a film series created by George Lucas.
             It depicts the adventures of various characters "a long time ago in a galaxy far, far away". <br>
