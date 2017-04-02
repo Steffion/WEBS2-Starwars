@@ -8,6 +8,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Order;
+use App\Product;
+use Illuminate\Support\Facades\Auth;
+
 class ShoppingCartController extends Controller
 {
     public function index()
@@ -52,5 +56,28 @@ class ShoppingCartController extends Controller
     {
         session()->forget('cart');
         return redirect('/cart');
+    }
+
+    public function checkout()
+    {
+        if (session('cart') == null) {
+            return back();
+        }
+
+        $order = new Order();
+
+        $order->user_id = Auth::id();
+
+        $order->save();
+
+        foreach (session('cart') as $item) {
+            $product = Product::find($item['id']);
+            $quantity = $item['quantity'];
+            $order->products()->attach(1, ['product_id' => $product->id, 'quantity' => $quantity]);
+        }
+
+        session()->forget('cart');
+
+        return view('ShoppingCart.checkout', compact('order'));
     }
 }

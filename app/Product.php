@@ -10,4 +10,9 @@ class Product extends Model
     {
         return $this->hasOne('App\Category', 'name', 'category');
     }
+
+    public function orders()
+    {
+        return $this->belongsToMany(Order::class);
+    }
 }

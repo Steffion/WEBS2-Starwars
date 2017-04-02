@@ -72,9 +72,9 @@
                 <button onclick="window.history.back()" type="button" class="btn m-2">
                     <i class="fa fa-arrow-right" aria-hidden="true"></i> Continue shopping
                 </button>
-                <button type="submit" class="btn btn-success m-2">
+                <a href="/cart/checkout" class="btn btn-success m-2">
                     <i class="fa fa-shopping-cart" aria-hidden="true"></i> Checkout
-                </button>
+                </a>
             </div>
         </div>
     </div>
