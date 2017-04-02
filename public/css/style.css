@@ -87,6 +87,14 @@ h2 {
     color: #b64419;
 }
 
+h2 a{
+    color:#b64419;
+}
+
+a.hover{
+    text-decoration: none;
+}
+
 hr {
     border-color: #191112;
     size: 3px;

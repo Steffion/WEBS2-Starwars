@@ -229,63 +229,63 @@ class ProductSeeder extends Seeder
             'name' => 'Dress',
             'price' => '40',
             'description' => 'Sizes: xs / m',
-            'category' => 'clothes',
+            'category' => 'female',
             'thumbnail' => base64_encode(file_get_contents('https://cdn-img-0.wanelo.com/p/862/923/a2e/66f221cf7b0c8da2fc45ffb/x354-q80.jpg' ))
         ]);
         DB::table('products')->insert([
             'name' => 'Dress',
             'price' => '45',
             'description' => 'Sizes: m / l ',
-            'category' => 'clothes',
+            'category' => 'female',
             'thumbnail' => base64_encode(file_get_contents('https://s-media-cache-ak0.pinimg.com/736x/fb/fd/f9/fbfdf9961d418ac7c72a4d1925f3f7dc.jpg' ))
         ]);
         DB::table('products')->insert([
             'name' => 'Dress',
             'price' => '30',
             'description' => 'Sizes: s / m',
-            'category' => 'clothes',
+            'category' => 'female',
             'thumbnail' => base64_encode(file_get_contents('http://www.thekesselrunway.com/wp-content/uploads/2015/11/primark_starwarsdress1.jpg' ))
         ]);
         DB::table('products')->insert([
             'name' => 'Dress',
             'price' => '20',
             'description' => 'Sizes: xl / xxl',
-            'category' => 'clothes',
+            'category' => 'female',
             'thumbnail' => base64_encode(file_get_contents('https://images.superherostuff.com/image-tsstrwrsr2d2cstjrtnk-1-watermark.jpg' ))
         ]);
         DB::table('products')->insert([
             'name' => 'Socks',
             'price' => '10',
             'description' => 'Sizes: s / m',
-            'category' => 'clothes',
+            'category' => 'female',
             'thumbnail' => base64_encode(file_get_contents('http://www.thinkgeek.com/images/products/additional/large/f18c_ladies_star_wars_socks_rebel.jpg' ))
         ]);
         DB::table('products')->insert([
             'name' => 'Socks',
             'price' => '8',
             'description' => 'Sizes: m',
-            'category' => 'clothes',
+            'category' => 'female',
             'thumbnail' => base64_encode(file_get_contents('https://s-media-cache-ak0.pinimg.com/236x/d8/99/31/d89931fc40e1efba7db2c1a869d06c5b.jpg' ))
              ]);
         DB::table('products')->insert([
             'name' => 'Hoodie',
             'price' => '50',
             'description' => 'Sizes: l / xl',
-            'category' => 'clothes',
+            'category' => 'female',
             'thumbnail' => base64_encode(file_get_contents('http://bpc.h-cdn.co/assets/15/50/480x582/gallery-1449506146-hm-star-wars-glittery-sweater-black.jpeg' ))
         ]);
         DB::table('products')->insert([
             'name' => 'Hoodie',
             'price' => '50',
             'description' => 'Sizes: l / xl',
-            'category' => 'clothes',
+            'category' => 'female',
             'thumbnail' => base64_encode(file_get_contents('http://bpc.h-cdn.co/assets/15/50/480x582/gallery-1449506146-hm-star-wars-glittery-sweater-black.jpeg' ))
         ]);
         DB::table('products')->insert([
             'name' => 'Shirt',
             'price' => '20',
             'description' => 'Sizes: l / xl',
-            'category' => 'clothes',
+            'category' => 'female',
             'thumbnail' => base64_encode(file_get_contents('https://s-media-cache-ak0.pinimg.com/736x/b8/3c/e2/b83ce27db291ceeacf04a4a835f0788a.jpg' ))
         ]);
 
@@ -295,63 +295,63 @@ class ProductSeeder extends Seeder
             'name' => 'Shirt',
             'price' => '15',
             'description' => 'Sizes: m / l',
-            'category' => 'clothes',
+            'category' => 'male',
             'thumbnail' => base64_encode(file_get_contents('https://www.truffleshuffle.co.uk/images_high_res/Mens_Grey_Marl_Class_Of_77_Star_Wars_T_Shirt_from_Chunk_hi_res.jpg' ))
         ]);
         DB::table('products')->insert([
             'name' => 'Shirt',
             'price' => '20',
             'description' => 'Sizes: l / xxl',
-            'category' => 'clothes',
+            'category' => 'male',
             'thumbnail' => base64_encode(file_get_contents('https://images-na.ssl-images-amazon.com/images/I/51sz1SlvPAL._UL1500_.jpg' ))
         ]);
         DB::table('products')->insert([
             'name' => 'Hoodie',
             'price' => '40',
             'description' => 'Sizes: m / l',
-            'category' => 'clothes',
+            'category' => 'male',
             'thumbnail' => base64_encode(file_get_contents('https://ae01.alicdn.com/kf/HTB1Bgx8HVXXXXXaXXXXq6xXFXXXG/Hot-Sale-2016-Star-Wars-Hoodie-Sweatshirt-New-Women-Men-Dark-Force-Male-Zipper-Black-Movie.jpg' ))
         ]);
         DB::table('products')->insert([
             'name' => 'Shirt',
             'price' => '10',
             'description' => 'Sizes: s / m',
-            'category' => 'clothes',
+            'category' => 'male',
             'thumbnail' => base64_encode(file_get_contents('https://ae01.alicdn.com/kf/HTB1NS6ZLVXXXXXuXVXXq6xXFXXXY/Fashion-Men-Clothes-font-b-Star-b-font-font-b-Wars-b-font-Print-T-Shirts.jpg' ))
         ]);
         DB::table('products')->insert([
             'name' => 'Hat',
             'price' => '25',
             'description' => 'One Size',
-            'category' => 'clothes',
+            'category' => 'male',
             'thumbnail' => base64_encode(file_get_contents('https://www.interstellarstore.com/image/cache/catalog/Star%20Wars/Star%20Wars%20Merchandise/Star%20Wars%20Rebel%20Flex%20Cap%201-1250x1250.jpg' ))
         ]);
         DB::table('products')->insert([
             'name' => 'Socks',
             'price' => '10',
             'description' => 'One Size',
-            'category' => 'clothes',
+            'category' => 'male',
             'thumbnail' => base64_encode(file_get_contents('https://s-media-cache-ak0.pinimg.com/564x/dc/4e/05/dc4e055075283c2cdabbc9c2526ef58d.jpg' ))
         ]);
         DB::table('products')->insert([
             'name' => 'Socks',
             'price' => '9',
             'description' => 'One Size',
-            'category' => 'clothes',
+            'category' => 'male',
             'thumbnail' => base64_encode(file_get_contents('http://scene7.zumiez.com/is/image/zumiez/pdp_hero/Stance-x-Star-Wars-Kylo-Ren-Crew-Socks-_265917-front.jpg' ))
         ]);
         DB::table('products')->insert([
             'name' => 'Han Solo Jacket',
             'price' => '100',
             'description' => 'Sizes: m',
-            'category' => 'clothes',
+            'category' => 'male',
             'thumbnail' => base64_encode(file_get_contents('https://fanjackets-b5dkzrq8ho5ccew.netdna-ssl.com/wp-content/uploads/2015/12/Han-Solo-Leather-Jacket.jpg' ))
         ]);
         DB::table('products')->insert([
             'name' => 'Jacket',
             'price' => '20',
             'description' => 'Sizes: m / l',
-            'category' => 'clothes',
+            'category' => 'male',
             'thumbnail' => base64_encode(file_get_contents('http://i.ebayimg.com/00/s/NTAwWDQzNg==/z/b9gAAOxylpNTVhqw/$_35.JPG?set_id=2' ))
         ]);
     }
