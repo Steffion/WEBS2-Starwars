@@ -369,7 +369,7 @@ class ProductSeeder extends Seeder
             'price' => '20',
             'description' => '10 inch',
             'category' => 'figures',
-            'thumbnail' => base64_encode(file_get_contents('public/img/figure.jpg' ))
+            'thumbnail' => base64_encode(file_get_contents('public/img/Figure.jpg' ))
         ]);
 
 
