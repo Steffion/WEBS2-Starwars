@@ -64,6 +64,10 @@ class ShoppingCartController extends Controller
             return back();
         }
 
+        if (!Auth::check()) {
+            return redirect('/login');
+        }
+
         $order = new Order();
 
         $order->user_id = Auth::id();
