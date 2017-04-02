@@ -9,6 +9,11 @@ use Illuminate\Support\Facades\Input;
 
 class ProductsManageController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('isadmin');
+    }
+
     /**
      * Display a listing of the resource.
      *

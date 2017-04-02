@@ -26,6 +26,10 @@ Route::get('sale', function () {
     return view('sale');
 });
 
+Route::get('forbidden', function () {
+    return view('errors.403');
+});
+
 Route::get('/search', 'ProductController@search');
 
 Route::get('/products', 'ProductController@index');
@@ -42,7 +46,7 @@ Route::get('/cart/checkout', 'ShoppingCartController@checkout');
 Route::get('/dashboard', 'DashboardController@index');
 
 Route::get('/dashboard/orders', 'OrdersController@index');
-Route::get('/dashboard/orders-admin', 'OrdersController@indexAdmin');
+Route::get('/dashboard/orders-admin', 'OrdersController@indexAdmin')->middleware('isadmin');
 
 Route::get('/dashboard/products', 'ProductsManageController@index');
 Route::get('/dashboard/products/create', 'ProductsManageController@create');

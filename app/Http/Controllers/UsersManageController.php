@@ -9,6 +9,11 @@ use Illuminate\Support\Facades\Input;
 
 class UsersManageController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('isadmin');
+    }
+
     /**
      * Display a listing of the resource.
      *

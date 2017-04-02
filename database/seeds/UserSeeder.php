@@ -16,6 +16,7 @@ class UserSeeder extends Seeder
             'name' => 'Stef de Goey',
             'email' => 'stefdegoey@icloud.com',
             'password' => bcrypt('secret'),
+            'isadmin' => true,
             'created_at' => Carbon::now(),
             'updated_at' => Carbon::now(),
         ]);
@@ -24,6 +25,16 @@ class UserSeeder extends Seeder
             'name' => 'Merel Kokkeler',
             'email' => 'kokkelermerel@gmail.com',
             'password' => bcrypt('secret'),
+            'isadmin' => true,
+            'created_at' => Carbon::now(),
+            'updated_at' => Carbon::now(),
+        ]);
+
+        DB::table('users')->insert([
+            'name' => 'Not An Admin',
+            'email' => 'fake-admin@avans.nl',
+            'password' => bcrypt('secret'),
+            'isadmin' => false,
             'created_at' => Carbon::now(),
             'updated_at' => Carbon::now(),
         ]);
@@ -37,6 +48,7 @@ class UserSeeder extends Seeder
                 'name' => $faker->name,
                 'email' => $faker->safeEmail,
                 'password' => bcrypt('secret'),
+                'isadmin' => false,
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now(),
             ]);
