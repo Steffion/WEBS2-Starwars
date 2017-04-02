@@ -13,7 +13,7 @@ class ProductSeeder extends Seeder
     {
 //        $faker = Faker\Factory::create();
 //
-//        $limit = 100;
+//        $limit = 20;
 //        $categories = \App\Category::all()->toArray();
 //
 //        for ($i = 0; $i < $limit; $i++) {
@@ -26,25 +26,15 @@ class ProductSeeder extends Seeder
 //            ]);
 //        }
 
-//        for ($i = 0; $i < $limit; $i++) {
-//            DB::table('products')->insert([
-//                'name' => $faker->word,
-//                'price' => $faker->randomFloat($nbMaxDecimals = 2, $min = 0, $max = 500),
-//                'description' => $faker->paragraph($nbSentences = 5, $variableNbSentences = true),
-//                'category' =>'movies',
-//                'thumbnail' => base64_encode(file_get_contents( link ))
-//            ]);
-//        }
-//
-//
 // MOVIES
         DB::table('products')->insert([
             'name' => 'Rogue One',
             'price' => '20',
             'description' => ' In a time of conflict, a group of unlikely heroes band together on a mission to steal the plans to the Death Star, the Empire’s ultimate weapon of destruction.',
             'category' => 'movies',
-            'thumbnail' => base64_encode(file_get_contents('http://www.indiewire.com/wp-content/uploads/2016/07/rogue-one-jyn-ersa-geared-up.jpg' ))
+            'thumbnail' => base64_encode(file_get_contents('http://www.indiewire.com/wp-content/uploads/2016/07/rogue-one-jyn-ersa-geared-up.jpg'))
         ]);
+
         DB::table('products')->insert([
             'name' => 'The Last Jedi',
             'price' => '20',
@@ -52,6 +42,7 @@ class ProductSeeder extends Seeder
             'category' => 'movies',
             'thumbnail' => base64_encode(file_get_contents('http://pictures.dealer.com/s/subaruofkeenesne/0959/af3e7d14a3bd9c0abd60bd74b743c43ex.jpg'))
         ]);
+
         DB::table('products')->insert([
             'name' => 'The Force Awakens',
             'price' => '20',
@@ -67,6 +58,7 @@ class ProductSeeder extends Seeder
             'category' => 'movies',
             'thumbnail' => base64_encode(file_get_contents('https://i.ytimg.com/vi/MYD_xxY5wEI/hqdefault.jpg'))
         ]);
+
         DB::table('products')->insert([
             'name' => 'The empire strikes back',
             'price' => '15',
@@ -74,6 +66,7 @@ class ProductSeeder extends Seeder
             'category' => 'movies',
             'thumbnail' => base64_encode(file_get_contents('https://i.ytimg.com/vi/xESiohGGP7g/hqdefault.jpg'))
         ]);
+
         DB::table('products')->insert([
             'name' => 'A New Hope',
             'price' => '15',
@@ -81,6 +74,7 @@ class ProductSeeder extends Seeder
             'category' => 'movies',
             'thumbnail' => base64_encode(file_get_contents('https://i.ytimg.com/vi/aRvrSCB8s1s/maxresdefault.jpg'))
         ]);
+
         DB::table('products')->insert([
             'name' => 'Revenge Of The Sith',
             'price' => '15',
@@ -88,6 +82,7 @@ class ProductSeeder extends Seeder
             'category' => 'movies',
             'thumbnail' => base64_encode(file_get_contents('http://the-indie-pendent.com/wp-content/uploads/2015/08/Star-Wars-Episode-III-Revenge-of-the-Sith.jpg'))
         ]);
+
         DB::table('products')->insert([
             'name' => 'Attack Of The Clones',
             'price' => '15',
@@ -95,6 +90,7 @@ class ProductSeeder extends Seeder
             'category' => 'movies',
             'thumbnail' => base64_encode(file_get_contents('http://thescruffynerfherder.com/wp-content/uploads/2015/12/Clones.jpg'))
         ]);
+
         DB::table('products')->insert([
             'name' => 'The Phantom Menace',
             'price' => '15',
@@ -110,56 +106,63 @@ class ProductSeeder extends Seeder
             'price' => '10',
             'description' => ' 10 inch ',
             'category' => 'plushies',
-            'thumbnail' => base64_encode(file_get_contents('http://www.theforcegifts.com/img/prods/B017Y8RD0K.jpg' ))
+            'thumbnail' => base64_encode(file_get_contents('http://www.theforcegifts.com/img/prods/B017Y8RD0K.jpg'))
         ]);
+
         DB::table('products')->insert([
             'name' => 'Chewie',
             'price' => '12',
             'description' => ' 10 inch ',
             'category' => 'plushies',
-            'thumbnail' => base64_encode(file_get_contents('https://images-na.ssl-images-amazon.com/images/I/71QeOg9t2xL._SL1500_.jpg' ))
+            'thumbnail' => base64_encode(file_get_contents('https://images-na.ssl-images-amazon.com/images/I/71QeOg9t2xL._SL1500_.jpg'))
         ]);
+
         DB::table('products')->insert([
             'name' => 'Bundle',
             'price' => '40',
             'description' => '10 inch ',
             'category' => 'plushies',
-            'thumbnail' => base64_encode(file_get_contents('https://media1.popsugar-assets.com/files/thumbor/VwNTGn8hdlOiIfmerEb2izRrbZw/fit-in/1024x1024/filters:format_auto-!!-:strip_icc-!!-/upl1/1/15111/01_2008/e21c45bd815a0a5f_star-wars-stuffed-animals.jpg' ))
+            'thumbnail' => base64_encode(file_get_contents('https://media1.popsugar-assets.com/files/thumbor/VwNTGn8hdlOiIfmerEb2izRrbZw/fit-in/1024x1024/filters:format_auto-!!-:strip_icc-!!-/upl1/1/15111/01_2008/e21c45bd815a0a5f_star-wars-stuffed-animals.jpg'))
         ]);
+
         DB::table('products')->insert([
             'name' => 'Yoda',
             'price' => '11',
             'description' => '10 inch ',
             'category' => 'plushies',
-            'thumbnail' => base64_encode(file_get_contents('http://www.hallmark.com/dw/image/v2/AALB_PRD/on/demandware.static/-/Sites-hallmark-master/default/dw6ae386ce/images/finished-goods/itty-bitty-yoda-stuffed-animal-root-1kid3238_1470_1.jpg?sfrm=jpg' ))
+            'thumbnail' => base64_encode(file_get_contents('http://www.hallmark.com/dw/image/v2/AALB_PRD/on/demandware.static/-/Sites-hallmark-master/default/dw6ae386ce/images/finished-goods/itty-bitty-yoda-stuffed-animal-root-1kid3238_1470_1.jpg?sfrm=jpg'))
         ]);
+
         DB::table('products')->insert([
             'name' => 'R2D2',
             'price' => '10',
             'description' => ' 10 inch ',
             'category' => 'plushies',
-            'thumbnail' => base64_encode(file_get_contents('http://www.entertainmentearth.com/images/AUTOIMAGES/UT00239Jlg.jpg' ))
+            'thumbnail' => base64_encode(file_get_contents('http://www.entertainmentearth.com/images/AUTOIMAGES/UT00239Jlg.jpg'))
         ]);
+
         DB::table('products')->insert([
             'name' => 'BB8',
             'price' => '20',
             'description' => ' 10 inch ',
             'category' => 'plushies',
-            'thumbnail' => base64_encode(file_get_contents('http://www.hallmark.com/dw/image/v2/AALB_PRD/on/demandware.static/-/Sites-hallmark-master/default/dw8d301383/images/finished-goods/itty-bittys-star-wars-bb8-stuffed-animal-root-1kdd1084_1470_1.jpg?sfrm=jpg' ))
+            'thumbnail' => base64_encode(file_get_contents('http://www.hallmark.com/dw/image/v2/AALB_PRD/on/demandware.static/-/Sites-hallmark-master/default/dw8d301383/images/finished-goods/itty-bittys-star-wars-bb8-stuffed-animal-root-1kdd1084_1470_1.jpg?sfrm=jpg'))
         ]);
+
         DB::table('products')->insert([
             'name' => 'Darth Vader',
             'price' => '8',
             'description' => '10 inch',
             'category' => 'plushies',
-            'thumbnail' => base64_encode(file_get_contents('http://76.my/Malaysia/changi-airport-special-edition-star-wars-plush-toy-darth-vader-j-depot-1602-11-j_depot@11.jpg' ))
-         ]);
+            'thumbnail' => base64_encode(file_get_contents('http://76.my/Malaysia/changi-airport-special-edition-star-wars-plush-toy-darth-vader-j-depot-1602-11-j_depot@11.jpg'))
+        ]);
+
         DB::table('products')->insert([
             'name' => 'Bundle',
             'price' => '100',
             'description' => '10 inch each',
             'category' => 'plushies',
-            'thumbnail' => base64_encode(file_get_contents('https://www.silverkris.com/sites/default/files/2015/1511-starwars-635.jpg' ))
+            'thumbnail' => base64_encode(file_get_contents('https://www.silverkris.com/sites/default/files/2015/1511-starwars-635.jpg'))
         ]);
 
         // FIGURES
@@ -351,11 +354,5 @@ class ProductSeeder extends Seeder
             'category' => 'clothes',
             'thumbnail' => base64_encode(file_get_contents('http://i.ebayimg.com/00/s/NTAwWDQzNg==/z/b9gAAOxylpNTVhqw/$_35.JPG?set_id=2' ))
         ]);
-
-
-
-
-
     }
-
 }

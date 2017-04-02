@@ -26,13 +26,16 @@
                     <tr>
                         <th scope="row" class="col-md">{{ $product->name }}</th>
                         <td>
-                            <input class="form-control" type="number" value="{{ $quantity }}" id="quantity">
+                            {{--<input class="form-control" type="number" value="{{ $quantity }}" id="quantity">--}}
+                            {{ $quantity }}
+                            <a href="/cart/add/{{ $product->id }}"><i class="fa fa-plus-circle" aria-hidden="true"></i></a>
+                            <a href="/cart/remove/{{ $product->id }}"><i class="fa fa-minus-circle" aria-hidden="true"></i></a>
                         </td>
                         <td>{{ $product->price }} USD</td>
                         <td>{{ $product->price * $quantity }} USD</td>
                         <?php $totalsum += $product->price * $quantity ?>
                         <td>
-                            <a class="btn btn-danger" href="/cart/remove/{{ $product->id }}">
+                            <a class="btn btn-danger" href="/cart/clear/{{ $product->id }}">
                                 <i class="fa fa-trash" aria-hidden="true"></i> Remove
                             </a>
                         </td>
@@ -69,9 +72,9 @@
                 <button onclick="window.history.back()" type="button" class="btn m-2">
                     <i class="fa fa-arrow-right" aria-hidden="true"></i> Continue shopping
                 </button>
-                <button type="submit" class="btn btn-success m-2">
+                <a href="/cart/checkout" class="btn btn-success m-2">
                     <i class="fa fa-shopping-cart" aria-hidden="true"></i> Checkout
-                </button>
+                </a>
             </div>
         </div>
     </div>
