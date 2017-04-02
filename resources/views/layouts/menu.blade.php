@@ -9,7 +9,7 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item">
-                <a class="nav-link" href="/">Home</a>
+                <a class="nav-link sliding-middle-out" href="/">Home</a>
             </li>
             @foreach($categories as $category)
                 @continue($category->parent != null)
@@ -23,25 +23,25 @@
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenu{{ $category->name }}">
                             @foreach ($category->children as $child)
-                                <a class="dropdown-item"
+                                <a class="dropdown-item sliding-middle-out"
                                    href="/products/{{ $child->name }}">{{ ucfirst($child->name) }}</a>
                             @endforeach
                         </div>
                     </li>
                 @else
                     <li class="nav-item">
-                        <a class="nav-link" href="/products/{{ $category->name }}">{{ ucfirst($category->name) }}</a>
+                        <a class="nav-link sliding-middle-out" href="/products/{{ $category->name }}">{{ ucfirst($category->name) }}</a>
                     </li>
                 @endif
             @endforeach
             <li class="nav-item">
-                <a class="nav-link" href="/sale">Sale</a>
+                <a class="nav-link sliding-middle-out" href="/sale">Sale</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="/cart">Shopping Cart</a>
+                <a class="nav-link sliding-middle-out" href="/cart">Shopping Cart</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="/about"> About us</a>
+                <a class="nav-link sliding-middle-out" href="/about"> About us</a>
             </li>
         </ul>
         <ul class="navbar-nav ml-auto">
@@ -56,11 +56,11 @@
                 </a>
                 <div class="dropdown-menu" aria-labelledby="userMenuDropDown">
                     @if (Auth::check())
-                        <a class="dropdown-item" href="/dashboard">Account settings</a>
-                        <a class="dropdown-item" href="/logout">Logout</a>
+                        <a class="dropdown-item sliding-middle-out" href="/dashboard">Account settings</a>
+                        <a class="dropdown-item sliding-middle-out" href="/logout">Logout</a>
                     @else
-                        <a class="dropdown-item" href="/login">Login</a>
-                        <a class="dropdown-item" href="/register">Register</a>
+                        <a class="dropdown-item sliding-middle-out" href="/login">Login</a>
+                        <a class="dropdown-item sliding-middle-out" href="/register">Register</a>
                     @endif
                 </div>
             </li>
