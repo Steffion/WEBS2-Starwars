@@ -30,6 +30,8 @@
 
 @include('layouts.menu')
 
+@include('layouts.breadcrumb')
+
 <div class="container">
     @yield('content')
 </div>
