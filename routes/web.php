@@ -45,6 +45,9 @@ Route::get('/cart/checkout', 'ShoppingCartController@checkout');
 
 Route::get('/dashboard', 'DashboardController@index');
 
+Route::post('/dashboard/account/edit', 'AccountController@update');
+Route::get('/dashboard/account/delete', 'AccountController@destroy');
+
 Route::get('/dashboard/orders', 'OrdersController@index');
 Route::get('/dashboard/orders-admin', 'OrdersController@indexAdmin')->middleware('isadmin');
 
