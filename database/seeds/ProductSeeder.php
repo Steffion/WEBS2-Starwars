@@ -31,7 +31,7 @@ class ProductSeeder extends Seeder
             'price' => '20',
             'description' => ' In a time of conflict, a group of unlikely heroes band together on a mission to steal the plans to the Death Star, the Empire’s ultimate weapon of destruction.',
             'category' => 'movies',
-            'thumbnail' => base64_encode(file_get_contents('www.indiewire.com/wp-content/uploads/2016/07/rogue-one-jyn-ersa-geared-up.jpg'))
+            'thumbnail' => base64_encode(file_get_contents('http://www.indiewire.com/wp-content/uploads/2016/07/rogue-one-jyn-ersa-geared-up.jpg'))
         ]);
 
         DB::table('products')->insert([
