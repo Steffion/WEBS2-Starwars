@@ -354,5 +354,28 @@ class ProductSeeder extends Seeder
             'category' => 'male',
             'thumbnail' => base64_encode(file_get_contents('http://i.ebayimg.com/00/s/NTAwWDQzNg==/z/b9gAAOxylpNTVhqw/$_35.JPG?set_id=2' ))
         ]);
+
+        //SALE
+        DB::table('products')->insert([
+            'name' => 'Shirt',
+            'price' => '20',
+            'description' => 'Sizes: m / l',
+            'category' => 'male',
+            'thumbnail' => base64_encode(file_get_contents('public/img/Shirt.jpg' ))
+        ]);
+
+        DB::table('products')->insert([
+            'name' => 'Figure',
+            'price' => '20',
+            'description' => '10 inch',
+            'category' => 'figures',
+            'thumbnail' => base64_encode(file_get_contents('public/img/figure.jpg' ))
+        ]);
+
+
+
     }
+
+
+
 }

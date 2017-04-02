@@ -23,6 +23,7 @@
             </ul>
         </div>
     </div>
+    
+    <img src="https://garyleland.com/wp-content/uploads/2014/02/thankyou-1024x538.png">
 
-    <img src="img/thanks.png" class="mx-auto">
 @endsection
