@@ -35,6 +35,7 @@ Route::get('/cart/add/{product}', 'ShoppingCartController@addToCart');
 Route::get('/cart/remove/{product}', 'ShoppingCartController@removeFromCart');
 Route::get('/cart/clear', 'ShoppingCartController@destroy');
 Route::get('/cart/clear/{product}', 'ShoppingCartController@clearFromCart');
+Route::get('/cart/checkout', 'ShoppingCartController@checkout');
 
 Route::get('/dashboard', 'DashboardController@index');
 
